@@ -53,7 +53,7 @@ export default function HomePage() {
 
     setIsLoading(true);
     try {
-      const parsed = await postJson<unknown>("/tokens", payload);
+      const parsed = await postJson<unknown>("/api/tokens", payload);
 
       const extracted = extractToken(parsed);
       if (extracted == null) {

@@ -51,7 +51,7 @@ export function PatientRegisterForm() {
 
     setIsSubmitting(true);
     try {
-      await postJson<unknown>("/api/patients/register", payload);
+      await postJson<unknown>("/api/patients", payload);
       setForm(initialForm);
       setStatus({ kind: "success", message: "Patient registered successfully." });
     } catch (err) {
